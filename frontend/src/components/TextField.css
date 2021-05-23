@@ -1,0 +1,13 @@
+.textfield-container {
+    width: 90%;
+    margin: auto;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    /* justify-content: left;
+    align-items: center; */
+}
+
+.textfield-label{
+    padding-right: 5px;
+}

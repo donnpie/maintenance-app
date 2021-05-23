@@ -11,6 +11,8 @@ const Item = require('../models/Item');
 router.post('/status', (req, res) => {
     const oldStatus = req.body.oldStatus;
     const newStatus = req.body.newStatus;
+    console.log('oldStatus',oldStatus);
+    console.log('newStatus',newStatus);
     const query = {status: oldStatus};
     Item.updateMany(query, {
         $set: {

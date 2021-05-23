@@ -3,6 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
+const cors = require('cors');
 
 //routers
 const item = require('./routes/items');
@@ -17,6 +18,10 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to remote MongoDB..."))
     .catch(err => console.log(err));
 
+//Cross origin permission
+app.use(cors({
+    origin: ['*','http://localhost:3000', process.env.PORT]
+}));
 
 //Middleware
 app.use(helmet());

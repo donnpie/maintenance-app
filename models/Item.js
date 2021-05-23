@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const ItemScema = new Schema({
     name: {
         type: String,
-        required: true
+        required: false
     },
     description: {
         type: String,
